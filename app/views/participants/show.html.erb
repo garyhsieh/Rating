@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Worker:</b>
+  <%= @participant.worker_id %>
+</p>
+
+<p>
+  <b>Hit:</b>
+  <%= @participant.hit_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_participant_path(@participant) %> |
+<%= link_to 'Back', participants_path %>

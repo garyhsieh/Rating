@@ -1,0 +1,17 @@
+<%= form_for([@participant,@participant_rating]) do |f| %>
+  <% if @participant_rating.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@participant_rating.errors.count, "error") %> prohibited this participant_rating from being saved:</h2>
+
+      <ul>
+      <% @participant_rating.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "Submit Rating"%>
+  </div>
+<% end %>

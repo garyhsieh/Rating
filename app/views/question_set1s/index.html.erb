@@ -1,0 +1,21 @@
+<h1>Listing question_set1s</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @question_set1s.each do |question_set1| %>
+  <tr>
+    <td><%= link_to 'Show', question_set1 %></td>
+    <td><%= link_to 'Edit', edit_question_set1_path(question_set1) %></td>
+    <td><%= link_to 'Destroy', question_set1, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Question set1', new_question_set1_path %>

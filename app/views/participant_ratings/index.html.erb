@@ -1,0 +1,21 @@
+<h1>Listing participant_ratings</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @participant_ratings.each do |participant_rating| %>
+  <tr>
+    <td><%= link_to 'Show', participant_rating %></td>
+    <td><%= link_to 'Edit', edit_participant_rating_path(participant_rating) %></td>
+    <td><%= link_to 'Destroy', participant_rating, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Participant rating', new_participant_rating_path %>
